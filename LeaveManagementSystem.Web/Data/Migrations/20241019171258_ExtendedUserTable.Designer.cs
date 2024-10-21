@@ -4,6 +4,7 @@ using LeaveManagementSystem.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagementSystem.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241019171258_ExtendedUserTable")]
+    partial class ExtendedUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,20 +105,20 @@ namespace LeaveManagementSystem.Web.Data.Migrations
                         {
                             Id = "408aa945-3d84-4421-8342-7269ec64d949",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "25b91258-6680-4a0d-be14-6cca2072b74f",
-                            DateOfBirth = new DateOnly(1950, 12, 1),
-                            Email = "admin@localhost.com",
+                            ConcurrencyStamp = "7ef026af-b843-4860-90f7-6f726326d6c7",
+                            DateOfBirth = new DateOnly(2001, 7, 12),
+                            Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Default",
                             LastName = "Admin",
                             LockoutEnabled = false,
-                            NormalizedEmail = "ADMIN@LOCALHOST.COM",
-                            NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHm6dFe6n33ouXVP777Reb6inkT6ACEJt7ZGs0K2FrgBXG6sTSkvDYK65fHkbPbRYA==",
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEhF0ICmnu/N6dkX4gpDHJ0QFklqRaxYLjbZEwbIL46VT0E7mEHtU7KajZDnhFIITQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3261065b-333c-45bb-90a5-8fd8134b0640",
+                            SecurityStamp = "4a6caba8-422b-42d4-bf89-b1b613622bf1",
                             TwoFactorEnabled = false,
-                            UserName = "admin@localhost.com"
+                            UserName = "admin@gmail.com"
                         });
                 });
 
@@ -169,19 +172,19 @@ namespace LeaveManagementSystem.Web.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6d9ed3ff-bebb-42bc-ad07-0255bb0f7edb",
+                            Id = "2447aa18-8ab1-4fb0-8ae8-c1870eeb534c",
                             Name = "Employee",
                             NormalizedName = "EMPLOYEE"
                         },
                         new
                         {
-                            Id = "cc4fcb01-de88-4c20-b4ac-8df5c2a65160",
+                            Id = "85e3fb94-8a85-4051-a6dc-a3f239357d92",
                             Name = "Supervisor",
                             NormalizedName = "SUPERVISOR"
                         },
                         new
                         {
-                            Id = "e9f639de-624f-4a4e-b8bf-2381725462f1",
+                            Id = "1569beba-2943-4893-8912-31c5955fb6fe",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -279,7 +282,7 @@ namespace LeaveManagementSystem.Web.Data.Migrations
                         new
                         {
                             UserId = "408aa945-3d84-4421-8342-7269ec64d949",
-                            RoleId = "e9f639de-624f-4a4e-b8bf-2381725462f1"
+                            RoleId = "1569beba-2943-4893-8912-31c5955fb6fe"
                         });
                 });
 
